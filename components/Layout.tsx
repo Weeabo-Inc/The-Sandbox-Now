@@ -19,8 +19,8 @@ export default function Layout({ children } : any) {
                 </div>
             </div>
             <div className=" p-1 border-b border-gray-200">
-                <div className="container mx-auto lg:w-2/4 flex justify-around items-center gap-2">
-                    <div className="flex gap-4 items-center justify-between text-[1rem] text-gray-400 ">
+                <div className="md:container mx-auto lg:w-2/4 md:flex justify-around items-center gap-2">
+                    <div className="md:flex gap-4 items-center text-center justify-between text-[1rem] grid content-center w-max mx-auto justify-self-center text-gray-400 ">
                         <Link href="/">
                             <a className="font-semibold text-blue-500">
                                 Data Policies
