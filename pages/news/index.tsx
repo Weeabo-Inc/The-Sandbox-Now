@@ -15,7 +15,6 @@ export const getStaticProps = () => {
 const Home = (props: { posts: any[] }) => {
     return (
         <>
-
             <div >
                 <p className='text-xl my-2 font-bold  text-center'>Newly Published</p>
                 {props.posts.map((post: any) => (

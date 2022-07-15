@@ -1,4 +1,5 @@
 import Link from "next/link"
+import RightArrow from './Arrow';
 
 
 export default function Layout({ children } : any) {
@@ -12,8 +13,8 @@ export default function Layout({ children } : any) {
                         </a>
                     </Link>
                     <Link href="https://discord.gg/cubash">
-                        <a className="text-white p-2 text-xs">
-                            Join <span className="font-bold">Cubash</span> <li className="fa fa-arrow-right"></li>
+                        <a className="text-white p-2 text-xs flex gap-1 items-center">
+                            Join <span className="font-bold">Cubash</span> <RightArrow/>
                         </a>
                     </Link>
                 </div>
