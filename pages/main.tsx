@@ -1,8 +1,7 @@
 import type { NextPage } from 'next'
-import { useState, useEffect } from 'react'
 import useSWR from "swr"
 import { response } from './api/brickplanet-privacy';
-import PrivacyComponent from './components/PrivacyComponent';
+import PrivacyComponent from './../components/PrivacyComponent';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 
