@@ -1,30 +1,28 @@
-
 import type { NextPage } from 'next'
-import { getPosts } from '../../scripts/utils';
-
-export const getStaticProps = () => {
-    const posts = getPosts(1); // the argument has no effect yet
-
-    return {
-        props: {
-            posts,
-        },
-    };
-};
-
-const Home = (props: { posts: any[] }) => {
+const fetcher = (url: string) => fetch(url).then(r => r.json())
+import useSWR from 'swr'
+import NewsCard from '../../components/NewCard'
+const News: NextPage = () => {
+    // fetch the news on the API endpoint
+    const { data, error } = useSWR('/api/news', fetcher)
+    if (error) return <div>Failed to load...</div>;
+    if (!data) return <div>Loading posts...</div>;
+    console.log(data)
+    data.map((news: any) => {
+        console.log(news)
+        })
     return (
-        <>
-            <div >
-                <p className='text-xl my-2 font-bold  text-center'>Newly Published</p>
-                {props.posts.map((post: any) => (
-                    <div key={post.slug} className="p-2 bg-black text-white text-center w-2/4 mx-auto">
-                        <p>{post.data.title}</p>
-                        <p>by: {post.data.author}</p>
+        <div className='prose mx-auto prose-slate'>
+
+            {data.map((news: any) => {
+                return (
+                    <div key={news.data.slug}>
+                        <NewsCard title={news.data.title} slug={news.data.slug} />
                     </div>
-                ))}
-            </div>
-        </>
-    );
-};
-export default Home;
+                )
+            }
+            )}
+        </div>
+    )
+}
+export default News;

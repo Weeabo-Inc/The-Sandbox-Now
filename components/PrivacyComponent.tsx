@@ -9,8 +9,8 @@ export default function PrivacyComponent(props: response) {
             <ul className='space-y-2 mt-2'>
                 {Object.keys(props.data).map((key: string) => {
                     return (
-                        <li key={key}>
-                            <span className='font-bold p-2'>{key}:</span> <span className='bg-white text-black p-1 italic'>{props.data[key]}</span>
+                        <li key={key} className="w-max mx-auto">
+                            <div className='inline-block font-bold p-2 w-24'>{key}:</div> <span className='bg-white text-black p-1 italic'>{(props.data[key] == "Unkown" ? "No Data" : props.data[key])}</span>
                         </li>
                     )
                 }

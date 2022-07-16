@@ -26,9 +26,12 @@ const Main: NextPage = () => {
     })
     
     return (
-        <div className='grid grid-cols-2 gap-5 container mx-auto mt-5'>
+       <>
+        <div className='grid md:grid-cols-2 gap-5 container mx-auto mt-5'>
             {privacyData}
         </div>
+        <div className='text-center mt-2'>The data above is obtained and analyzed by a team of insiders to ensure it trustworthy origin.</div>
+        </>
     )
 }
 
