@@ -6,7 +6,7 @@ const News: NextPage = () => {
     // fetch the news on the API endpoint
     const { data, error } = useSWR('/api/news', fetcher)
     if (error) return <div>Failed to load...</div>;
-    if (!data) return <div>Loading posts...</div>;
+    if (!data) return <div className="flex h-screen w-screen justify-center items-center text-3xl font-bold animate-pulse">Loading posts...</div>;
 
     data.reverse()
     return (
