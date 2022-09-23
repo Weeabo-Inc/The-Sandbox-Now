@@ -7,10 +7,8 @@ const News: NextPage = () => {
     const { data, error } = useSWR('/api/news', fetcher)
     if (error) return <div>Failed to load...</div>;
     if (!data) return <div>Loading posts...</div>;
-    console.log(data)
-    data.map((news: any) => {
-        console.log(news)
-        })
+
+    data.reverse()
     return (
         <div className='prose mx-auto prose-slate'>
 
