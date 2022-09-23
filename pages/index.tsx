@@ -8,7 +8,7 @@ const Home: NextPage = () => {
         <div>News</div>
       </div>
 
-      <div className=' text-center xl:w-2/4 mx-auto text-gray-400  font-semibold text-lg'>We work on centralizing an uniting sandboxes torwards a common objective; self-improvement, safety and establishment. We write news about the virtual space that's constantly evolving, and watch as it slowly evolves.</div>
+      <div className=' text-center xl:w-2/4 mx-auto text-gray-400  font-semibold text-lg'>We work on centralizing an uniting sandboxes torwards a common objective; self-improvement, safety and establishment. We write news about the virtual space that&apos;s constantly evolving, and watch as it slowly evolves.</div>
       <div className='grid grid-cols-2 xl:w-1/6 mx-auto items-center gap-4 justify-center'>
         <Link href="/news">
           <button className='mt-5 bg-blue-600 rounded w-[100px] mx-auto text-center p-2 text-white font-semibold'>
