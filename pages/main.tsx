@@ -10,7 +10,7 @@ const fetcher = (url: string) => fetch(url).then(r => r.json())
 const Main: NextPage = () => {
     const { data, error } = useSWR('/api/brickplanet-privacy', fetcher)
     if (error) return <div>Failed to load...</div>;
-    if (!data) return <div>Loading posts...</div>;
+    if (!data) return <div>Loading sites...</div>;
 
     let privacyData: any = [];
 

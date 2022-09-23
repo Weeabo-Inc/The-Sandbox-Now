@@ -15,7 +15,7 @@ const Home: NextPage = () => {
             News
           </button>
         </Link>
-        <Link href="https://discord.gg/87jwQT38zN">
+        <Link href="https://discord.gg/jkNBXBeV2t">
           <button className='mt-5 bg-blue-600 rounded w-[150px] mx-auto text-center p-2 text-white font-semibold'>
             Join Discord
           </button>
