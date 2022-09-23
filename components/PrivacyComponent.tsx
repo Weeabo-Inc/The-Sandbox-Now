@@ -1,4 +1,4 @@
-import { response } from './../pages/api/brickplanet-privacy';
+import { response } from '../pages/api/brickplanet-privacy';
 export default function PrivacyComponent(props: response) {
     return (
         <div className="mx-auto p-2 bg-black rounded text-white">

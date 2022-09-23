@@ -5,13 +5,12 @@ import NewsCard from '../../components/NewCard'
 const News: NextPage = () => {
     // fetch the news on the API endpoint
     const { data, error } = useSWR('/api/news', fetcher)
-    if (error) return <div>Failed to load...</div>;
-    if (!data) return <div className="flex h-screen w-screen justify-center items-center text-3xl font-bold animate-pulse">Loading posts...</div>;
+    if (error) return <div className="notification">Failed to load...</div>;
+    if (!data) return <div className="notification">Loading posts...</div>;
 
     data.reverse()
     return (
-        <div className='prose mx-auto prose-slate'>
-
+    <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-4 m-3">
             {data.map((news: any) => {
                 return (
                     <div key={news.data.slug}>
@@ -20,7 +19,7 @@ const News: NextPage = () => {
                 )
             }
             )}
-        </div>
+    </div>
     )
 }
 export default News;

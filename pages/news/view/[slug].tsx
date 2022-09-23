@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 import useSWR from 'swr'
 const Post = (props) => {
@@ -6,12 +5,12 @@ const Post = (props) => {
     console.log(props)
   // fetch the news on the API endpoint
     const { data, error } = useSWR(`/api/getNews?slug=${props.slug}`, fetcher)
-    if (error) return <div>Failed to load...</div>;
-    if (!data) return <div>Loading posts...</div>;
+    if (error) return <div className="notification">Failed to load...</div>;
+    if (!data) return <div className="notification">Loading posts...</div>;
     console.log(data.post)
     return (
         <>
-         <div  className='prose mx-auto mt-5 xl:prose-xl'dangerouslySetInnerHTML={{__html: data.post.content}} />
+         <div  className='prose mx-auto mt-5 xl:prose-xl' dangerouslySetInnerHTML={{__html: data.post.content}} />
         </>
     )
 }

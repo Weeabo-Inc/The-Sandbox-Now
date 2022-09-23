@@ -34,7 +34,7 @@ export default function Layout({ children } : any) {
                             </a>
 
                         </Link>
-                           <Link href="/trust">
+                           <Link href="/members">
                             <a className="hover:text-black">
                                 Notable Members
                             </a>

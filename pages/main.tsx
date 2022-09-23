@@ -5,10 +5,7 @@ import PrivacyComponent from './../components/PrivacyComponent';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 
-interface res {
-    data: response[],
-    error: any
-}
+
 
 const Main: NextPage = () => {
     const { data, error } = useSWR('/api/brickplanet-privacy', fetcher)
@@ -27,10 +24,7 @@ const Main: NextPage = () => {
     
     return (
        <>
-        <div className='grid md:grid-cols-2 gap-5 container mx-auto mt-5'>
-            {privacyData}
-        </div>
-        <div className='text-center mt-2'>The data above is obtained and analyzed by a team of insiders to ensure it trustworthy origin.</div>
+      <div>WORK IN PROGRESS</div>
         </>
     )
 }

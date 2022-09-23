@@ -21,6 +21,7 @@ button {
 }
 
 
-
-
+.notification {
+ @apply flex h-screen w-screen justify-center items-center text-3xl font-bold animate-pulse
+}
 

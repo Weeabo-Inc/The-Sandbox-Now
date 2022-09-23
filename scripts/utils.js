@@ -7,7 +7,7 @@ export const getPosts = (pageIndex) => {
     withFileTypes: true,
   });
 
-  const posts = dirFiles
+  return dirFiles
     .map((file) => {
       if (!file.name.endsWith('.mdx')) return;
 
@@ -21,6 +21,4 @@ export const getPosts = (pageIndex) => {
       return { data, content, slug };
     })
     .filter((post) => post);
-
-  return posts
 };
