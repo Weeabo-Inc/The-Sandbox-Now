@@ -9,7 +9,7 @@ export default function Layout({ children } : any) {
                 <div className="flex items-center container xl:w-2/4 mx-auto justify-between">
                     <Link href="/">
                         <a className="text-white border-white font-extrabold p-1 border-2 text-2xl">
-                            BTT
+                            TSB
                         </a>
                     </Link>
                     <Link href="https://discord.gg/cubash">
@@ -24,7 +24,7 @@ export default function Layout({ children } : any) {
                     <div className="md:flex gap-4 items-center text-center justify-between text-[1rem] grid content-center w-max mx-auto justify-self-center text-gray-400 ">
                         <Link href="/main">
                             <a className="font-semibold text-blue-500">
-                                Data Policies
+                                Sandboxes
                             </a>
 
                         </Link>
@@ -36,12 +36,12 @@ export default function Layout({ children } : any) {
                         </Link>
                            <Link href="/trust">
                             <a className="hover:text-black">
-                                Trust Level
+                                Notable Members
                             </a>
 
                         </Link>            <Link href="/news">
                             <a className="hover:text-black">
-                                Privacy News
+                                Sandbox News
                             </a>
 
                         </Link>
